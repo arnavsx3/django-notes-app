@@ -76,3 +76,9 @@ def createNote(request):
     )
     serializer = NoteSerializer(note, many=False)
     return Response(serializer.data)
+
+@api_view(['POST'])
+def github_webhook(request):
+    print("🔥 GitHub webhook received!")
+    print(request.data)
+    return Response({"status": "received"})

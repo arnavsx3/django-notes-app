@@ -8,4 +8,5 @@ urlpatterns = [
     path('notes/<str:pk>/delete/', deleteNote, name="delete-note"),
     path('notes/create/', createNote, name="create-note"),
     path('notes/<str:pk>/', getNote, name="note"),
+    path('github-webhook/', github_webhook, name="github-webhook"),
 ]
